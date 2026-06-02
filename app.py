@@ -25,14 +25,14 @@ provincia = st.sidebar.selectbox(
     provincias
 )
 
-cantones = sorted(df["Canton"].dropna()
+cantones = sorted(df["Canton"].dropna().unique())
 
 canton = st.sidebar.selectbox(
     "Selecciones un cantón", 
     cantones
 )    
 
-df_filtrado = df[df["Provincia"] == provincia, df["Canton]== canton]
+df_filtrado = df[df["Provincia"] == provincia]
 
 # Gráfico
 grafico = px.histogram(
