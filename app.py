@@ -18,14 +18,14 @@ st.write("Vista previa de los datos")
 st.dataframe(df.head())
 
 # Selección de provincia
-provincias = sorted(df["PROVINCIA"].dropna().unique())
+provincias = sorted(df["Provincia"].dropna().unique())
 
 provincia = st.sidebar.selectbox(
     "Seleccione una provincia",
     provincias
 )
 
-df2_filtrado = df[df["PROVINCIA"] == provincia]
+df2_filtrado = df[df["Provincia"] == provincia]
 
 # Gráfico
 grafico = px.histogram(
