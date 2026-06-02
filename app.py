@@ -97,6 +97,13 @@ st.markdown(f"""
 **Año lectivo:** {año_lectivo}
 """)
 
+st.sidebar.markdown(f"""
+### Distribución por Tipo de Discapacidad
+**Provincia:** {provincia}  
+**Cantón:** {canton}  
+**Año lectivo:** {año_lectivo}
+""")
+
 grafico_barras = px.bar(
     df_filtrado,
     x="Discapacidad",
