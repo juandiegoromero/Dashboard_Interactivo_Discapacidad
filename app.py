@@ -3,7 +3,7 @@ import pandas as pd
 import libreria_funciones as lf
 import plotly.express as px
 
-st.sidebar.image("python.png")
+st.image("python.png")
 
 st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Sistema Educativo Ecuatoriano")
 
