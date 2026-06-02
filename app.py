@@ -11,29 +11,21 @@ st.sidebar.title("Contenidos")
 
 st.sidebar.image("python.png")
 
-
-uploaded_files = st.file_uploader(
-    "Upload data", accept_multiple_files=True, type="csv"
-)
-for uploaded_file in uploaded_files:
-    df = pd.read_csv(uploaded_file)
-    st.write(df)
-
 # Cargar datos
-df2 = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
+df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
 
 st.write("Vista previa de los datos")
-st.dataframe(df2.head())
+st.dataframe(df.head())
 
 # Selección de provincia
-provincias = sorted(df2["PROVINCIA"].dropna().unique())
+provincias = sorted(df["PROVINCIA"].dropna().unique())
 
 provincia = st.sidebar.selectbox(
     "Seleccione una provincia",
     provincias
 )
 
-df2_filtrado = df2[df2["PROVINCIA"] == provincia]
+df2_filtrado = df[df["PROVINCIA"] == provincia]
 
 # Gráfico
 grafico = px.histogram(
