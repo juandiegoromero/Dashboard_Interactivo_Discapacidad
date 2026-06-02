@@ -46,7 +46,7 @@ canton = st.sidebar.selectbox(
 año_lectivo = sorted(
     df[
         (df["Provincia"] == provincia) &
-        (df["Cantón] == canton)
+        (df["Canton"] == canton)
       ]["Año_lectivo"]
       .dropna()
       .unique()
