@@ -9,7 +9,14 @@ st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Siste
 
 st.sidebar.title("Ojetivo de la aplicación:")
 
-st.sidebar.title("Integrantes:<br> - Luis Alberto Chicaiza Gonzaléz <br> Juan Diego Romero Fernández")
+st.sidebar.markdown(
+    """
+    ## Integrantes:
+    Luis Alberto Chicaiza González<br>
+    Juan Diego Romero Fernández
+    """,
+    unsafe_allow_html=True
+)
 
 # Cargar datos
 df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
