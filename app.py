@@ -7,9 +7,9 @@ st.image("python.png")
 
 st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Sistema Educativo Ecuatoriano")
 
-st.sidebar.title("Parámetros")
+st.sidebar.title("Ojetivo de la aplicación:")
 
-st.sidebar.title("Contenidos")
+st.sidebar.title("Integrantes:<br> - Luis Alberto Chicaiza Gonzaléz <br> Juan Diego Romero Fernández")
 
 # Cargar datos
 df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
