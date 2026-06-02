@@ -87,7 +87,7 @@ grafico = px.histogram(
 grafico_barras = px.bar(
     df_filtrado,
     x="Discapacidad", 
-    title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
+    title=f"Distribución por Tipo de Discapacidad <br> - {provincia} | {canton} | {año_lectivo}"
 )
 
 
