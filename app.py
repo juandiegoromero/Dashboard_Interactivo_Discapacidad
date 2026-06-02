@@ -44,7 +44,4 @@ grafico = px.histogram(
 
 st.plotly_chart(grafico, use_container_width=True)
 
-st.plotly_chart(grafico, use_container_width=True)
-
-
 
