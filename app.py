@@ -80,7 +80,7 @@ año_lectivo = año_lectivo
 
 titulo = (
     f"Distribución por Tipo de Discapacidad<br>"
-    f"<sup>Provincia: {provincia} | Cantón: {canton} | Año Lectivo: {anio_lectivo}</sup>"
+    f"<sup>Provincia: {provincia} | Cantón: {canton} | Año Lectivo: {año_lectivo}</sup>"
 )
 
 grafico = px.histogram(
