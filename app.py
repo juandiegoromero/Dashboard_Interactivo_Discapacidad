@@ -19,10 +19,11 @@ for uploaded_file in uploaded_files:
     df = pd.read_csv(uploaded_file)
     st.write(df)
 
-st.title("Dashboard de Discapacidad Estudiantil")
+# Cargar datos
+df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
 
 st.write("Vista previa de los datos")
-# st.dataframe(df.head())
+st.dataframe(df.head())
 
 # Selección de provincia
 provincias = sorted(df["PROVINCIA"].dropna().unique())
@@ -40,6 +41,8 @@ grafico = px.histogram(
     x="TIPO_DISCAPACIDAD",
     title="Distribución por Tipo de Discapacidad"
 )
+
+st.plotly_chart(grafico, use_container_width=True)
 
 st.plotly_chart(grafico, use_container_width=True)
 
