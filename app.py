@@ -17,13 +17,6 @@ df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
 #st.write("Vista previa de los datos")
 #st.dataframe(df.head())
 
-st.subheader("Datos filtrados")
-
-st.dataframe(
-    df_filtrado,
-    use_container_width=True
-)
-
 # Selección de provincia
 provincias = sorted(df["Provincia"].dropna().unique())
 
@@ -62,6 +55,14 @@ df_filtrado = df[
     (df["Canton"] == canton) &
     (df["Año_lectivo"] == año_lectivo)
 ]
+
+st.write("Vista previa de los datos")
+st.subheader("Datos filtrados")
+
+st.dataframe(
+    df_filtrado,
+    use_container_width=True
+)
 
 # Gráfico
 grafico = px.histogram(
