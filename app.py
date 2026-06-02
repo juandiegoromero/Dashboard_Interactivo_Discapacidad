@@ -84,13 +84,24 @@ grafico = px.histogram(
     title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 )
 
+# grafico_barras = px.bar(
+  #  df_filtrado,
+   # x="Discapacidad", 
+    #title=f"Distribución por Tipo de Discapacidad <br> | Provincia: {provincia}  <br> | Cantón: {canton}  <br> | Año lectivo: {año_lectivo} <br>",
+    #color_discrete_sequence=["green"]
+#)
+st.markdown(f"""
+### Distribución por Tipo de Discapacidad
+**Provincia:** {provincia}  
+**Cantón:** {canton}  
+**Año lectivo:** {año_lectivo}
+""")
+
 grafico_barras = px.bar(
     df_filtrado,
-    x="Discapacidad", 
-    title=f"Distribución por Tipo de Discapacidad <br> | Provincia: {provincia}  <br> | Cantón: {canton}  <br> | Año lectivo: {año_lectivo} <br>"<br>,
+    x="Discapacidad",
     color_discrete_sequence=["green"]
 )
-
 
 st.plotly_chart(grafico, use_container_width=True)
 st.sidebar.plotly_chart(grafico_barras, use_container_width = True)
