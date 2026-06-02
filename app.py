@@ -78,10 +78,9 @@ provincia = provincias
 canton = cantones
 año_lectivo = año_lectivo
 
-titulo = (
-    f"Distribución por Tipo de Discapacidad<br>"
-    f"<sup>Provincia: {provincia} | Cantón: {canton} | Año Lectivo: {año_lectivo}</sup>"
-)
+contexto = f"Provincia: {provincia} | Cantón: {canton} | Año Lectivo: {año_lectivo}"
+
+title=f"Distribución por Tipo de Discapacidad<br><sup>{contexto}</sup>"
 
 grafico = px.histogram(
     df_filtrado,
