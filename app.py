@@ -3,13 +3,13 @@ import pandas as pd
 import libreria_funciones as lf
 import plotly.express as px
 
+st.sidebar.image("python.png")
+
 st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Sistema Educativo Ecuatoriano")
 
 st.sidebar.title("Parámetros")
 
 st.sidebar.title("Contenidos")
-
-st.sidebar.image("python.png")
 
 # Cargar datos
 df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
@@ -81,7 +81,6 @@ año_lectivo = año_lectivo
 grafico = px.histogram(
     df_filtrado,
     x="Discapacidad", 
-    y= "Número de estudiantes",
     title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 )
 
