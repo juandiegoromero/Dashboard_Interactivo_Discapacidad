@@ -64,11 +64,6 @@ st.dataframe(
     use_container_width=True
 )
 
-st.sidebar.write("### Filtros seleccionados")
-st.sidebar.write(f"📍 Provincia: {provincia}")
-st.sidebar.write(f"🏙️ Cantón: {canton}")
-st.sidebar.write(f"📅 Año lectivo: {año_lectivo}")
-
 # Gráfico
 #grafico = px.histogram(
 #    df_filtrado,
@@ -79,8 +74,8 @@ st.sidebar.write(f"📅 Año lectivo: {año_lectivo}")
 # st.plotly_chart(grafico, use_container_width=True)
 
 # Variables obtenidas de los filtros
-provincia = provincias
-canton = cantones
+provincia = provincia
+canton = canton
 año_lectivo = año_lectivo
 
 grafico = px.histogram(
