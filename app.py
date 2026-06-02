@@ -64,6 +64,11 @@ st.dataframe(
     use_container_width=True
 )
 
+st.sidebar.write("### Filtros seleccionados")
+st.sidebar.write(f"📍 Provincia: {provincia}")
+st.sidebar.write(f"🏙️ Cantón: {canton}")
+st.sidebar.write(f"📅 Año lectivo: {año_lectivo}")
+
 # Gráfico
 #grafico = px.histogram(
 #    df_filtrado,
