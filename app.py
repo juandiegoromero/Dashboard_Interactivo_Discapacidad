@@ -7,6 +7,8 @@ st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Siste
 
 st.sidebar.title("Parámetros")
 
+st.sidebar.title("Contenidos")
+
 st.sidebar.image("python.png")
 
 
