@@ -22,7 +22,7 @@ for uploaded_file in uploaded_files:
 st.title("Dashboard de Discapacidad Estudiantil")
 
 st.write("Vista previa de los datos")
-st.dataframe(df.head())
+# st.dataframe(df.head())
 
 # Selección de provincia
 provincias = sorted(df["PROVINCIA"].dropna().unique())
