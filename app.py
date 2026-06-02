@@ -78,17 +78,11 @@ provincia = provincias
 canton = cantones
 año_lectivo = año_lectivo
 
-titulo = (
-    f"Distribución por Tipo de Discapacidad<br>"
-    f"<sup>Provincia: {provincia if provincia else 'Todas'} | "
-    f"Cantón: {canton if canton else 'Todos'} | "
-    f"Año Lectivo: {año_lectivo if año_lectivo else 'Todos'}</sup>"
-)
-
 grafico = px.histogram(
     df_filtrado,
     x="Discapacidad",
-    title=titulo
+    title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
+)
 )
 
 st.plotly_chart(grafico, use_container_width=True)
