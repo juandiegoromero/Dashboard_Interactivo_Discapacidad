@@ -14,8 +14,8 @@ st.sidebar.image("python.png")
 # Cargar datos
 df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
 
-#st.write("Vista previa de los datos")
-#st.dataframe(df.head())
+st.write("Vista previa de los datos")
+st.dataframe(df.head())
 
 # Selección de provincia
 provincias = sorted(df["Provincia"].dropna().unique())
@@ -65,12 +65,28 @@ st.dataframe(
 )
 
 # Gráfico
+#grafico = px.histogram(
+#    df_filtrado,
+ #    x="Discapacidad",
+#     title="Distribución por Tipo de Discapacidad"
+# )
+
+# st.plotly_chart(grafico, use_container_width=True)
+
+# Variables obtenidas de los filtros
+provincia = provincia_seleccionada
+canton = canton_seleccionado
+año_lectivo = año_seleccionado
+
+titulo = (
+    f"Distribución por Tipo de Discapacidad<br>"
+    f"<sup>Provincia: {provincia} | Cantón: {canton} | Año Lectivo: {anio_lectivo}</sup>"
+)
+
 grafico = px.histogram(
     df_filtrado,
     x="Discapacidad",
-    title="Distribución por Tipo de Discapacidad"
+    title=titulo
 )
 
 st.plotly_chart(grafico, use_container_width=True)
-
-
