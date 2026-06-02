@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
-import libreria_funciones as lf
 import plotly.express as px
+import libreria_funciones as lf
+
 
 st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Sistema Educativo Ecuatoriano")
 
