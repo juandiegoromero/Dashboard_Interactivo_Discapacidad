@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import libreria_funciones as lf
 
-st.title("Proyecto Final Universidad Casa Grande")
+st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Sistema Educativo Ecuatoriano")
 
 st.sidebar.title("Parámetros")
 
