@@ -33,7 +33,7 @@ provincia = st.sidebar.selectbox(
     provincias
 )
 
-df_filtrado = df[df["PROVINCIA"] == provincia]
+df2_filtrado = df2[df2["PROVINCIA"] == provincia]
 
 # Gráfico
 grafico = px.histogram(
