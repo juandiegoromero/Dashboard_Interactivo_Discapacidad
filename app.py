@@ -80,7 +80,7 @@ año_lectivo = año_lectivo
 
 grafico = px.histogram(
     df_filtrado,
-    x="Discapacidad",
+    x="Discapacidad", y= "Número de estudiantes"
     title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 )
 
