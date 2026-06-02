@@ -25,7 +25,7 @@ provincia = st.sidebar.selectbox(
     provincias
 )
 
-cantones = sorted(df["Canton"].dropna().unique())
+cantones = sorted(df["Canton"].dropna()
 
 canton = st.sidebar.selectbox(
     "Selecciones un cantón", 
