@@ -30,7 +30,7 @@ df_filtrado = df[df["Provincia"] == provincia]
 # Gráfico
 grafico = px.histogram(
     df_filtrado,
-    x="TIPO_DISCAPACIDAD",
+    x="Discapacidad",
     title="Distribución por Tipo de Discapacidad"
 )
 
