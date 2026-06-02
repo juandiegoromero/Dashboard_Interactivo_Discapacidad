@@ -74,9 +74,9 @@ st.dataframe(
 # st.plotly_chart(grafico, use_container_width=True)
 
 # Variables obtenidas de los filtros
-provincia = provincia_seleccionada
-canton = canton_seleccionado
-año_lectivo = año_seleccionado
+provincia = provincias
+canton = cantones
+año_lectivo = año_lectivo
 
 titulo = (
     f"Distribución por Tipo de Discapacidad<br>"
