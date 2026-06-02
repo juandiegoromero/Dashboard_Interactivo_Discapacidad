@@ -21,9 +21,6 @@ for uploaded_file in uploaded_files:
 
 st.title("Dashboard de Discapacidad Estudiantil")
 
-# Cargar datos
-df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
-
 st.write("Vista previa de los datos")
 st.dataframe(df.head())
 
