@@ -14,8 +14,15 @@ st.sidebar.image("python.png")
 # Cargar datos
 df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
 
-st.write("Vista previa de los datos")
-st.dataframe(df.head())
+#st.write("Vista previa de los datos")
+#st.dataframe(df.head())
+
+st.subheader("Datos filtrados")
+
+st.dataframe(
+    df_filtrado,
+    use_container_width=True
+)
 
 # Selección de provincia
 provincias = sorted(df["Provincia"].dropna().unique())
@@ -25,21 +32,36 @@ provincia = st.sidebar.selectbox(
     provincias
 )
 
-cantones = sorted(df["Canton"].dropna().unique())
+cantones = sorted(
+    df[df["Provincia"] == provincia]["Canton"]
+    .dropna()
+    .unique()
+)
 
 canton = st.sidebar.selectbox(
     "Selecciones un cantón", 
     cantones
 )   
 
-año_lectivo = sorted(df["Año_lectivo"].dropna().unique())
+año_lectivo = sorted(
+    df[
+        (df["Provincia"] == provincia) &
+        (df["Cantón] == canton)
+      ]["Año_lectivo"]
+      .dropna()
+      .unique()
+)
 
-canton = st.sidebar.selectbox(
+año_lectivo = st.sidebar.selectbox(
     "Selecciones el año lectivo", 
     año_lectivo
 )  
 
-df_filtrado = df[df["Provincia"] == provincia]
+df_filtrado = df[
+    (df["Provincia"] == provincia) &
+    (df["Canton"] == canton) &
+    (df["Año_lectivo"] == año_lectivo)
+]
 
 # Gráfico
 grafico = px.histogram(
