@@ -83,6 +83,6 @@ grafico = px.histogram(
     x="Discapacidad",
     title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 )
-)
+
 
 st.plotly_chart(grafico, use_container_width=True)
