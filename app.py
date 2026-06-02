@@ -84,5 +84,12 @@ grafico = px.histogram(
     title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 )
 
+grafico_barras = px.bar(
+    df_filtrado,
+    x="Discapacidad", 
+    title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
+)
+
 
 st.plotly_chart(grafico, use_container_width=True)
+st.sidebar.plotly_chart(grafico_barras, use_container_width = True)
