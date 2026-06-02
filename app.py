@@ -30,7 +30,14 @@ cantones = sorted(df["Canton"].dropna().unique())
 canton = st.sidebar.selectbox(
     "Selecciones un cantón", 
     cantones
-)    
+)   
+
+año_lectivo = sorted(df["Año_lectivo"].dropna().unique())
+
+canton = st.sidebar.selectbox(
+    "Selecciones el año lectivo", 
+    año_lectivo
+)  
 
 df_filtrado = df[df["Provincia"] == provincia]
 
