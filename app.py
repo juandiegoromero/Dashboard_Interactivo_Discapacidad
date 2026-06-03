@@ -155,7 +155,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown(f"""
     <div class="indicador">
-        Cantidad por Provincia.<br>
+        Cantidad por Provincia<br>
         <span class="valor">{cant_provincia}</span>
     </div>
     """, unsafe_allow_html=True)
