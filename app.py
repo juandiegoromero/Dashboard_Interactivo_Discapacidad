@@ -3,7 +3,9 @@ import pandas as pd
 import libreria_funciones as lf
 import plotly.express as px
 import plotly.graph_objects as go
-
+from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
+import time
 
 st.image("python.png")
 
