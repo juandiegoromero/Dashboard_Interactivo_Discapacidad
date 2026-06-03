@@ -178,39 +178,23 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Crear columnas
-col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
+col1, col2, col3 = st.columns([1,1,1])
 
-#with col1:
- #   st.markdown(f"""
- #   <div class="indicador">
- #       Cantidad por Provincia<br>
-  #      <span class="valor">{cant_provincia}</span>
-  #  </div>
- #   """, unsafe_allow_html=True)
-
-#with col2:
- #   st.markdown(f"""
-#    <div class="indicador">
-#        Cantidad por Cantón<br>
-#        <span class="valor">{cant_canton}</span>
-#    </div>
-#    """, unsafe_allow_html=True)
-
-with col3:
+with col1:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes provincia<br>
         <span class="valor"> {total_estudiantes_provincia:,.0f}</span>
     </div>
     """, unsafe_allow_html=True)
-with col4:
+with col2:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes Cantón<br>
         <span class="valor">{total_estudiantes_canton:,.0f}</span>
     </div>
     """, unsafe_allow_html=True)
-with col5:
+with col3:
    st.markdown(f"""
   <div class="indicador">
         % Cantón Vs Provincia<br>
