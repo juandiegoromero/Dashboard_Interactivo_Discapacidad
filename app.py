@@ -155,7 +155,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown(f"""
     <div class="indicador">
-        Cant. por Prov.<br>
+        Cantidad por Provincia.<br>
         <span class="valor">{cant_provincia}</span>
     </div>
     """, unsafe_allow_html=True)
@@ -163,7 +163,7 @@ with col1:
 with col2:
     st.markdown(f"""
     <div class="indicador">
-        Cant. por Cantón<br>
+        Cantidad por Cantón<br>
         <span class="valor">{cant_canton}</span>
     </div>
     """, unsafe_allow_html=True)
@@ -171,7 +171,7 @@ with col2:
 with col3:
     st.markdown(f"""
     <div class="indicador">
-        % Cantón / Provincia<br>
+        % Cantón Vs Provincia<br>
         <span class="valor">{porcentaje:.2f}%</span>
     </div>
     """, unsafe_allow_html=True)
