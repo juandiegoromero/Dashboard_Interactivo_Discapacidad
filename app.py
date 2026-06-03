@@ -125,7 +125,7 @@ cant_provincia = len(df_provincia)
 
 # Cantidad de estudiantes con discapacidad por cantón
 # cant_estud_canton = df["Total_Estudiantes"].sum()
-sum_provincia = sum(df_provincia)
+# sum_provincia = sum(df_provincia)
 
 #c
 # Porcentaje del cantón respecto a la provincia
