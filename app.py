@@ -156,7 +156,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Crear columnas
-col1, col2, col3, col4 = st.columns([1,1,1,0.8])
+col1, col2, col3, col4 = st.columns([0.8,0.8,0.8,0.8])
 
 with col1:
     st.markdown(f"""
