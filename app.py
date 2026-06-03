@@ -185,8 +185,9 @@ with col3:
 with col4:
     st.markdown(f"""
     <div class="indicador">
-        % Estudiantes con discapacidad por cantón<br>
-        <span class="valor">{sum_provincia}%</span>
+        Nuevo Indicador<br>
+        <span class="valor">{sum_provincia}</span>
     </div>
+    """, unsafe_allow_html=True)
 
 
