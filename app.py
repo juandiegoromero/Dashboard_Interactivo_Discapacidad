@@ -71,6 +71,29 @@ st.dataframe(
     use_container_width=True
 )
 
+# Filtrar por año lectivo y provincia
+df_provincia = df[
+    (df['Provincia'] == provincia) &
+    (df['Año_lectivo'] == año_lectivo)
+] 
+
+
+# Sumar estudiantes de toda la provincia
+total_estudiantes_provincia = df_provincia['Total_Estudiantes'].sum()
+
+
+# Filtrar por año lectivo, provincia y cantón
+df_canton = df[
+    (df['Provincia'] == provincia) &
+    (df['Cantón'] == canton_año_lectivo) &
+    (df['Año_lectivo'] == año_lectivo)
+]
+
+# Sumar estudiantes del cantón
+total_estudiantes_canton = df_canton['Total_Estudiantes'].sum()
+
+
+
 # Gráfico
 #grafico = px.histogram(
 #    df_filtrado,
@@ -185,14 +208,14 @@ with col4:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes provincia<br>
-        <span class="valor"> 0.00 </span>
+        <span class="valor"> f"{total_estudiantes_provincia:,.0f}" </span>
     </div>
     """, unsafe_allow_html=True)
 with col5:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes Cantón<br>
-        <span class="valor"> 0.00 </span>
+        <span class="valor">f"{total_estudiantes_canton:,.0f}"</span>
     </div>
     """, unsafe_allow_html=True)
 
