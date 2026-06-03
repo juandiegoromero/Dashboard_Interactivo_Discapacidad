@@ -208,14 +208,14 @@ with col4:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes provincia<br>
-        <span class="valor"> f"{total_estudiantes_provincia:,.0f}" </span>
+        <span class="valor"> {total_estudiantes_provincia:,.0f}</span>
     </div>
     """, unsafe_allow_html=True)
 with col5:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes Cantón<br>
-        <span class="valor">f"{total_estudiantes_canton:,.0f}"</span>
+        <span class="valor">{total_estudiantes_canton:,.0f}</span>
     </div>
     """, unsafe_allow_html=True)
 
