@@ -150,9 +150,9 @@ cant_provincia = len(df_provincia)
 # cant_estud_canton = df["Total_Estudiantes"].sum()
 # sum_provincia = sum(df_provincia)
 
-#c
+
 # Porcentaje del cantón respecto a la provincia
-porcentaje = (cant_canton / cant_provincia * 100) if cant_provincia > 0 else 0
+porcentaje = (total_estudiantes_canton / total_estudiantes_provincia * 100) if total_estudiantes_provincia > 0 else 0
 
 st.plotly_chart(grafico, use_container_width=True)
 st.sidebar.plotly_chart(grafico_barras, use_container_width = True) 
@@ -180,44 +180,43 @@ st.markdown("""
 # Crear columnas
 col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
 
-with col1:
-    st.markdown(f"""
-    <div class="indicador">
-        Cantidad por Provincia<br>
-        <span class="valor">{cant_provincia}</span>
-    </div>
-    """, unsafe_allow_html=True)
+#with col1:
+ #   st.markdown(f"""
+ #   <div class="indicador">
+ #       Cantidad por Provincia<br>
+  #      <span class="valor">{cant_provincia}</span>
+  #  </div>
+ #   """, unsafe_allow_html=True)
 
-with col2:
-    st.markdown(f"""
-    <div class="indicador">
-        Cantidad por Cantón<br>
-        <span class="valor">{cant_canton}</span>
-    </div>
-    """, unsafe_allow_html=True)
+#with col2:
+ #   st.markdown(f"""
+#    <div class="indicador">
+#        Cantidad por Cantón<br>
+#        <span class="valor">{cant_canton}</span>
+#    </div>
+#    """, unsafe_allow_html=True)
 
 with col3:
-   st.markdown(f"""
-  <div class="indicador">
-        % Cantón Vs Provincia<br>
-    <span class="valor">{porcentaje:.2f}%</span>
-   </div>
-   """, unsafe_allow_html=True)
-
-with col4:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes provincia<br>
         <span class="valor"> {total_estudiantes_provincia:,.0f}</span>
     </div>
     """, unsafe_allow_html=True)
-with col5:
+with col4:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes Cantón<br>
         <span class="valor">{total_estudiantes_canton:,.0f}</span>
     </div>
     """, unsafe_allow_html=True)
+with col5:
+   st.markdown(f"""
+  <div class="indicador">
+        % Cantón Vs Provincia<br>
+    <span class="valor">{porcentaje:.2f}%</span>
+   </div>
+   """, unsafe_allow_html=True)
 
 
 
