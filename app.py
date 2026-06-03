@@ -116,6 +116,64 @@ grafico_barras = px.bar(
     x="Discapacidad",
     color_discrete_sequence=["green"]
 )
+# Cantidad de registros del cantón filtrado
+cant_canton = len(df_filtrado)
+
+# Cantidad de registros de la provincia seleccionada
+df_provincia = df[df["Provincia"] == provincia]
+cant_provincia = len(df_provincia)
+
+# Porcentaje del cantón respecto a la provincia
+porcentaje = (cant_canton / cant_provincia * 100) if cant_provincia > 0 else 0
 
 st.plotly_chart(grafico, use_container_width=True)
 st.sidebar.plotly_chart(grafico_barras, use_container_width = True)
+
+# CSS para los recuadros
+st.markdown("""
+<style>
+.indicador{
+    border:2px solid #c0392b;
+    padding:15px;
+    text-align:center;
+    border-radius:8px;
+    background-color:#111111;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+.valor{
+    font-size:28px;
+    color:#4FC3F7;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Crear columnas
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown(f"""
+    <div class="indicador">
+        Cant. por Prov.<br>
+        <span class="valor">{cant_provincia}</span>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown(f"""
+    <div class="indicador">
+        Cant. por Cantón<br>
+        <span class="valor">{cant_canton}</span>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown(f"""
+    <div class="indicador">
+        % Cantón / Provincia<br>
+        <span class="valor">{porcentaje:.2f}%</span>
+    </div>
+    """, unsafe_allow_html=True)
+
+
