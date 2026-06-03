@@ -164,7 +164,7 @@ fig = go.Figure(go.Scattergeo())
 fig.update_layout(height=300, margin={"r":0,"t":0,"l":0,"b":0})
 fig.show()
 
-st.sidebar(fig)
+st.sidebar.plotly_chart(fig, use_container_width=True)
 
 # CSS para los recuadros
 st.markdown("""
