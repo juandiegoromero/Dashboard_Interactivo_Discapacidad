@@ -185,7 +185,7 @@ with col3:
 with col4:
     st.markdown(f"""
     <div class="indicador">
-        Nuevo Indicador<br>
+        Estudiantes_provincia<br>
         <span class="valor">{sum_provincia}</span>
     </div>
     """, unsafe_allow_html=True)
