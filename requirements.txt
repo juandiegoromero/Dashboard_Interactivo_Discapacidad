@@ -4,6 +4,3 @@ plotly
 openpyxl
 folium
 geopy
-geopy.geocoders 
-RateLimiter 
-Nominatim
