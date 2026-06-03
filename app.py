@@ -184,8 +184,8 @@ with col3:
 with col4:
     st.markdown(f"""
     <div class="indicador">
-        % Estudiantes con discapacidad por cantónoooooooooooooooooooooooooooooppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk<br>
-        <span class="valor">{porcentaje:.2f}%</span>
+        % Estudiantes con discapacidad por cantón<br>
+        <span class="valor">{cant_estud_canton}%</span>
     </div>
 
 
