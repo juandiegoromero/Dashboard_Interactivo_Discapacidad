@@ -60,8 +60,7 @@ año_lectivo = st.sidebar.selectbox(
 df_filtrado = df[
     (df["Provincia"] == provincia) &
     (df["Canton"] == canton) &
-    (df["Año_lectivo"] == año_lectivo) &
-    (df["Total_Estudiantes"] == total ) 
+    (df["Año_lectivo"] == año_lectivo) 
 ]
 
 st.write("Vista previa de los datos")
