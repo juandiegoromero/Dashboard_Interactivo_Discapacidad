@@ -6,3 +6,4 @@ folium
 geopy
 geopy.geocoders 
 RateLimiter 
+Nominatim
