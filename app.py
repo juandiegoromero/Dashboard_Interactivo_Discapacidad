@@ -60,7 +60,8 @@ año_lectivo = st.sidebar.selectbox(
 df_filtrado = df[
     (df["Provincia"] == provincia) &
     (df["Canton"] == canton) &
-    (df["Año_lectivo"] == año_lectivo)
+    (df["Año_lectivo"] == año_lectivo) &
+    (df["Total_Estudiantes"] == total ) 
 ]
 
 st.write("Vista previa de los datos")
@@ -123,6 +124,10 @@ cant_canton = len(df_filtrado)
 df_provincia = df[df["Provincia"] == provincia]
 cant_provincia = len(df_provincia)
 
+#Cantidad de estudiantes con discapacidad por cantón
+cant_estud_canton = df["Total_Estudiantes"] .sum()
+
+#c
 # Porcentaje del cantón respecto a la provincia
 porcentaje = (cant_canton / cant_provincia * 100) if cant_provincia > 0 else 0
 
@@ -150,7 +155,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Crear columnas
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.markdown(f"""
@@ -175,5 +180,12 @@ with col3:
         <span class="valor">{porcentaje:.2f}%</span>
     </div>
     """, unsafe_allow_html=True)
+
+with col4:
+    st.markdown(f"""
+    <div class="indicador">
+        % Estudiantes con discapacidad por cantónoooooooooooooooooooooooooooooppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk<br>
+        <span class="valor">{porcentaje:.2f}%</span>
+    </div>
 
 
