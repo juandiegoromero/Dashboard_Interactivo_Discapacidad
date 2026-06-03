@@ -7,7 +7,7 @@ import geopy from geopy.geocoders
 import Nominatim
 import geopy from geopy.extra.rate_limiter 
 import RateLimiter
-import time
+
 
 st.image("python.png")
 
