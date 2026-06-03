@@ -185,7 +185,7 @@ with col4:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes_provincia<br>
-        <span class="valor">"# Estud x prov"</span>
+        <span class="valor">" 0.00 "</span>
     </div>
     """, unsafe_allow_html=True)
 
