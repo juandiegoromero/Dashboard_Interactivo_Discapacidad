@@ -4,9 +4,9 @@ import libreria_funciones as lf
 import plotly.express as px
 import plotly.graph_objects as go
 import geopy from geopy.geocoders 
-# import Nominatim
+import Nominatim
 import geopy from geopy.extra.rate_limiter 
-# import RateLimiter 
+import RateLimiter 
 
 
 st.image("python.png")
