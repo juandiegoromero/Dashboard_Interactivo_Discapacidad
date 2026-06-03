@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import libreria_funciones as lf
 import plotly.express as px
-import streamlit.folium as stfo
+
 
 st.image("python.png")
 
