@@ -155,7 +155,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Crear columnas
-col1, col2, col3, col4 = st.columns([1,1,1,1])
+col1, col2, col3, col4 = st.columns([1,1,1,1,1])
 
 with col1:
     st.markdown(f"""
@@ -185,6 +185,13 @@ with col4:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes provincia<br>
+        <span class="valor"> 0.00 </span>
+    </div>
+    """, unsafe_allow_html=True)
+with col5:
+    st.markdown(f"""
+    <div class="indicador">
+        Estudiantes Cantón<br>
         <span class="valor"> 0.00 </span>
     </div>
     """, unsafe_allow_html=True)
