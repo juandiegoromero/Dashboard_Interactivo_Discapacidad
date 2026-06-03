@@ -85,7 +85,7 @@ total_estudiantes_provincia = df_provincia['Total_Estudiantes'].sum()
 # Filtrar por año lectivo, provincia y cantón
 df_canton = df[
     (df['Provincia'] == provincia) &
-    (df['Cantón'] == canton_año_lectivo) &
+    (df['Cantón'] == canton) &
     (df['Año_lectivo'] == año_lectivo)
 ]
 
