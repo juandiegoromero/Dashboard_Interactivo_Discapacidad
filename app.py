@@ -173,19 +173,19 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-# with col3:
-   # st.markdown(f"""
-  #  <div class="indicador">
-  #      % Cantón Vs Provincia<br>
- #     <span class="valor">{porcentaje:.2f}%</span>
- #   </div>
-  #  """, unsafe_allow_html=True)
+with col3:
+   st.markdown(f"""
+  <div class="indicador">
+        % Cantón Vs Provincia<br>
+    <span class="valor">{porcentaje:.2f}%</span>
+   </div>
+   """, unsafe_allow_html=True)
 
 with col4:
     st.markdown(f"""
     <div class="indicador">
         Estudiantes_provincia<br>
-        <span class="valor">{sum_provincia}</span>
+        <span class="valor">"# Estudiantes por provincia"</span>
     </div>
     """, unsafe_allow_html=True)
 
