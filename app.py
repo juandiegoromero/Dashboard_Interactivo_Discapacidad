@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from geopy.geocoders 
 import Nominatim
-from geopy.extra.rate_limiter 
+from geopy.extra
 import RateLimiter 
 
 
