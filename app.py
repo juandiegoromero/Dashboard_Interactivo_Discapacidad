@@ -123,12 +123,6 @@ grafico = px.histogram(
     #color_discrete_sequence=["green"]
   #)
 
-fig = go.Figure(go.Scattergeo())
-fig.update_layout(height=300, margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
-
-
-
 st.markdown(f"""
 ### Distribución por Tipo de Discapacidad
 **Provincia:** {provincia}  
@@ -142,6 +136,10 @@ st.sidebar.markdown(f"""
 **Cantón:** {canton}  
 **Año lectivo:** {año_lectivo}
 """)
+
+fig = go.Figure(go.Scattergeo())
+fig.update_layout(height=300, margin={"r":0,"t":0,"l":0,"b":0})
+fig.show()
 
 st.sidebar(fig)
 
