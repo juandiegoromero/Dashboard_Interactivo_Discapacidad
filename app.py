@@ -129,7 +129,7 @@ cant_provincia = len(df_provincia)
 
 #c
 # Porcentaje del cantón respecto a la provincia
-# porcentaje = (cant_canton / cant_provincia * 100) if cant_provincia > 0 else 0
+porcentaje = (cant_canton / cant_provincia * 100) if cant_provincia > 0 else 0
 
 st.plotly_chart(grafico, use_container_width=True)
 st.sidebar.plotly_chart(grafico_barras, use_container_width = True) 
