@@ -122,7 +122,7 @@ st.sidebar.markdown(f"""
 **Año lectivo:** {año_lectivo}
 """)
 
- Titulos = print(f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}")
+ Titulos = "Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 st.sidebar.subheader(Titulos)
 
 grafico_barras = px.bar(
