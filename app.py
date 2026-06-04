@@ -293,6 +293,6 @@ st.sidebar.subheader("Proyección de Estudiantes con Discapacidad")
 st.sidebar.dataframe(df_proyeccion, use_container_width=True)
 
 
-
-st.image("Banner_IncludataEC2.png", use_container_width=false)
+#Footer
+st.image("Banner_IncludataEC2.png", use_container_width=true)
 
