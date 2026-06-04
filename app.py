@@ -210,8 +210,8 @@ with col3:
 
 # Filtrar según la selección del usuario
 df_pred = df[
-    (df["Provincia"] == provincia_seleccionada) &
-    (df["Canton"] == canton_seleccionado)
+    (df["Provincia"] == provincia) &
+    (df["Canton"] == canton)
 ].copy()
 
 # Agrupar por año lectivo
@@ -251,15 +251,15 @@ X_futuro = pd.DataFrame({
 # Predicciones
 predicciones = modelo.predict(X_futuro)
 
-ultimo_anio = int(
+ultimo_año = int(
     str(df_pred["Año_lectivo"].iloc[-1]).split("-")[0]
 )
 
 años_futuros = [
     f"{a}-{a+1}"
     for a in range(
-        ultimo_anio + 1,
-        ultimo_anio + n_predicciones + 1
+        ultimo_año + 1,
+        ultimo_año + n_predicciones + 1
     )
 ]
 
@@ -287,7 +287,7 @@ fig_pred.add_trace(
 )
 
 fig_pred.update_layout(
-    title=f"Proyección de Estudiantes con Discapacidad<br>{provincia_seleccionada} - {canton_seleccionado}",
+    title=f"Proyección de Estudiantes con Discapacidad<br>{provincia} - {canton}",
     xaxis_title="Año Lectivo",
     yaxis_title="Total de Estudiantes",
     height=450,
