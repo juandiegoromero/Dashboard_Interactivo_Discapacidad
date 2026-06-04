@@ -296,13 +296,19 @@ fig_pred.update_layout(
 
 st.sidebar.title("Proyección de Estudiantes con Discapacidad")
 
-st.sidebar.subheader("Proyección de Estudiantes con Discapacidad")
+st.subheader("Proyección de Estudiantes con Discapacidad")
 
-st. sidebar.plotly_chart(
+st.plotly_chart(
     fig_pred,
     use_container_width=True
 )
 
+df_proyeccion = pd.DataFrame({
+    "Año_lectivo": anios_futuros,
+    "Estudiantes_Proyectados": predicciones.round().astype(int)
+})
+
+st.sidebar.dataframe(df_proyeccion, use_container_width=True)
 
 
 
