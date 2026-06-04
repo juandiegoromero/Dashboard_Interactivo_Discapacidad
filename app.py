@@ -226,9 +226,9 @@ df_pred = (
 df_pred = df_pred.sort_values("Año_lectivo")
 
 # Crear variable numérica para el modelo
-df_pred["Año_lectivo"] = np.arange(len(df_pred))
+df_pred["Periodo"] = np.arange(len(df_pred))
 
-X = df_pred[["Año_lectivo"]]
+X = df_pred[["Periodo"]]
 y = df_pred["Total_Estudiantes"]
 
 # Entrenar modelo
@@ -239,14 +239,14 @@ modelo.fit(X, y)
 n_predicciones = 5
 
 # Generar períodos futuros
-ultimo_periodo = df_pred["Año_lectivo"].max()
+ultimo_periodo = df_pred["Periodo"].max()
 
 X_futuro = pd.DataFrame({
     "Periodo": range(
         ultimo_periodo + 1,
         ultimo_periodo + n_predicciones + 1
     )
-})
+}) 
 
 # Predicciones
 predicciones = modelo.predict(X_futuro)
@@ -278,7 +278,7 @@ fig_pred.add_trace(
 # Proyección
 fig_pred.add_trace(
     go.Scatter(
-        x=anios_futuros,
+        x=años_futuros,
         y=predicciones,
         mode="lines+markers",
         line=dict(dash="dash"),
