@@ -16,9 +16,8 @@ st.sidebar.markdown(f"""
 
 st.sidebar.markdown(f"""
     ## **Integrantes:**
-    Luis Alberto Chicaiza González
-    Juan Diego Romero Fernández
-    """)
+    -  Luis Alberto Chicaiza González
+    -  Juan Diego Romero Fernández """)
 
 # Cargar datos
 df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
@@ -290,4 +289,4 @@ df_proyeccion = pd.DataFrame({
 st.sidebar.subheader("Proyección de Estudiantes con Discapacidad")
 st.sidebar.dataframe(df_proyeccion, use_container_width=True)
 
-st.image("Banner_includataEC.png", use_container_width=True)
+st.image("Banner_IncludataEC.png", use_container_width=True)
