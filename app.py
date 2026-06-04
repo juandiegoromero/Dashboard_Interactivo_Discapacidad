@@ -11,9 +11,7 @@ st.image("Includata EC.png")
 st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Sistema Educativo Ecuatoriano")
 
 st.sidebar.markdown(f"""
-    ##**Ojetivo de la aplicación:**
-    Desarrollar un dashboard interactivo para el monitoreo de estudiantes con discapacidad en el sistema educativo ecuatoriano mediante técnicas de Ciencia de Datos y la plataforma Streamlit.<br>
-    """)
+    **Ojetivo de la aplicación:** <br> Desarrollar un dashboard interactivo para el monitoreo de estudiantes con discapacidad en el sistema educativo ecuatoriano mediante técnicas de Ciencia de Datos y la plataforma Streamlit. """)
 
 st.sidebar.markdown(f"""
     ## **Integrantes:**
