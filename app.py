@@ -239,7 +239,7 @@ modelo.fit(X, y)
 n_predicciones = 5
 
 # Generar períodos futuros
-ultimo_periodo = df_pred["Periodo"].max()
+ultimo_periodo = df_pred["Año_lectivo"].max()
 
 X_futuro = pd.DataFrame({
     "Periodo": range(
