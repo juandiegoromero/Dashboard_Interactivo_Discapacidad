@@ -67,7 +67,14 @@ df_filtrado = df[
     (df["Año_lectivo"] == año_lectivo) 
 ]
 
-st.write("Vista previa de los datos")
+st.markdown(f"""
+### Datos informativos
+**Provincia:** {provincia}  
+**Cantón:** {canton}  
+**Año lectivo:** {año_lectivo}
+""")
+
+st.write("Vista previa de los datos filtados")
 st.subheader("Datos filtrados")
 
 st.dataframe(
@@ -105,14 +112,6 @@ grafico = px.histogram(
     x="Discapacidad", 
     title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 )
-
-st.markdown(f"""
-### Datos informativos
-**Provincia:** {provincia}  
-**Cantón:** {canton}  
-**Año lectivo:** {año_lectivo}
-""")
-
 
 st.sidebar.markdown(f"""
 ### Datos Informativos
