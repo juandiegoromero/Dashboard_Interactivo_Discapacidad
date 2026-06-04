@@ -4,7 +4,7 @@ import libreria_funciones as lf
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-
+from sklearn.linear_model import LinearRegression
 
 
 st.image("python.png")
