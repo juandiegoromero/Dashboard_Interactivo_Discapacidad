@@ -121,7 +121,7 @@ st.sidebar.markdown(f"""
 **Año lectivo:** {año_lectivo}
 """)
 
-st.sidebar.markdown(f"<b> Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo} </b>")
+st.sidebar.markdown(f"""**Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}**""")
 
 
 grafico_barras = px.bar(
