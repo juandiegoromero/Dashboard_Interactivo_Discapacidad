@@ -1,8 +1,10 @@
 streamlit
 pandas
+numpy
 plotly
 openpyxl
 folium
+streamlit-folium
 geopy
 scikit-learn
-numpy
+matplotlib
