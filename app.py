@@ -304,7 +304,7 @@ st.plotly_chart(
 )
 
 df_proyeccion = pd.DataFrame({
-    "Año_lectivo": anios_futuros,
+    "Año_lectivo": años_futuros,
     "Estudiantes_Proyectados": predicciones.round().astype(int)
 })
 
