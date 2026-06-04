@@ -16,7 +16,7 @@ st.sidebar.markdown(f"""
 
 st.sidebar.markdown(f"""
     ## **Integrantes:**
-    Luis Alberto Chicaiza González<br>
+    Luis Alberto Chicaiza González
     Juan Diego Romero Fernández
     """)
 
