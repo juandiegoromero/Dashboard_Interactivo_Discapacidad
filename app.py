@@ -226,9 +226,9 @@ df_pred = (
 df_pred = df_pred.sort_values("Año_lectivo")
 
 # Crear variable numérica para el modelo
-df_pred["Periodo"] = np.arange(len(df_pred))
+df_pred["Año_lectivo"] = np.arange(len(df_pred))
 
-X = df_pred[["Periodo"]]
+X = df_pred[["Año_lectivo"]]
 y = df_pred["Total_Estudiantes"]
 
 # Entrenar modelo
