@@ -208,5 +208,101 @@ with col3:
    </div>
    """, unsafe_allow_html=True)
 
+# Filtrar según la selección del usuario
+df_pred = df[
+    (df["Provincia"] == provincia_seleccionada) &
+    (df["Canton"] == canton_seleccionado)
+].copy()
+
+# Agrupar por año lectivo
+df_pred = (
+    df_pred
+    .groupby("Año_lectivo", as_index=False)
+    ["Total_Estudiantes"]
+    .sum()
+)
+
+# Ordenar por año
+df_pred = df_pred.sort_values("Año_lectivo")
+
+# Crear variable numérica para el modelo
+df_pred["Periodo"] = np.arange(len(df_pred))
+
+X = df_pred[["Periodo"]]
+y = df_pred["Total_Estudiantes"]
+
+# Entrenar modelo
+modelo = LinearRegression()
+modelo.fit(X, y)
+
+# Número de años a proyectar
+n_predicciones = 5
+
+# Generar períodos futuros
+ultimo_periodo = df_pred["Periodo"].max()
+
+X_futuro = pd.DataFrame({
+    "Periodo": range(
+        ultimo_periodo + 1,
+        ultimo_periodo + n_predicciones + 1
+    )
+})
+
+# Predicciones
+predicciones = modelo.predict(X_futuro)
+
+ultimo_anio = int(
+    str(df_pred["Año_lectivo"].iloc[-1]).split("-")[0]
+)
+
+años_futuros = [
+    f"{a}-{a+1}"
+    for a in range(
+        ultimo_anio + 1,
+        ultimo_anio + n_predicciones + 1
+    )
+]
+
+fig_pred = go.Figure()
+
+# Datos históricos
+fig_pred.add_trace(
+    go.Scatter(
+        x=df_pred["Año_lectivo"],
+        y=df_pred["Total_Estudiantes"],
+        mode="lines+markers",
+        name="Histórico"
+    )
+)
+
+# Proyección
+fig_pred.add_trace(
+    go.Scatter(
+        x=anios_futuros,
+        y=predicciones,
+        mode="lines+markers",
+        line=dict(dash="dash"),
+        name="Proyección"
+    )
+)
+
+fig_pred.update_layout(
+    title=f"Proyección de Estudiantes con Discapacidad<br>{provincia_seleccionada} - {canton_seleccionado}",
+    xaxis_title="Año Lectivo",
+    yaxis_title="Total de Estudiantes",
+    height=450,
+    template="plotly_white"
+)
+
 st.sidebar.title("Proyección de Estudiantes con Discapacidad")
+
+st.sidebar.subheader("Proyección de Estudiantes con Discapacidad")
+
+st. sidebar.plotly_chart(
+    fig_pred,
+    use_container_width=True
+)
+
+
+
 
