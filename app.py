@@ -81,7 +81,6 @@ df_provincia = df[
     (df['Año_lectivo'] == año_lectivo)
 ] 
 
-
 # Sumar estudiantes de toda la provincia
 total_estudiantes_provincia = df_provincia['Total_Estudiantes'].sum()
 
@@ -122,7 +121,7 @@ st.sidebar.markdown(f"""
 **Año lectivo:** {año_lectivo}
 """)
 
-st.sidebar.markdown(f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}")
+st.sidebar.markdown(f"<b> Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo} </b>")
 
 
 grafico_barras = px.bar(
