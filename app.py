@@ -116,13 +116,6 @@ grafico = px.histogram(
     title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
 )
 
-# grafico_barras = px.bar(
-  #  df_filtrado,
-   # x="Discapacidad", 
-    #title=f"Distribución por Tipo de Discapacidad <br> | Provincia: {provincia}  <br> | Cantón: {canton}  <br> | Año lectivo: {año_lectivo} <br>",
-    #color_discrete_sequence=["green"]
-  #)
-
 st.markdown(f"""
 ### Datos informativos
 **Provincia:** {provincia}  
@@ -140,7 +133,8 @@ st.sidebar.markdown(f"""
 grafico_barras = px.bar(
     df_filtrado,
     x="Discapacidad",
-    color_discrete_sequence=["green"]
+    color_discrete_sequence=["green"],
+    title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}
 )
 # Cantidad de registros del cantón filtrado
 cant_canton = len(df_filtrado)
@@ -285,9 +279,10 @@ fig_pred.add_trace(
 )
 
 fig_pred.update_layout(
-    title=f"Proyección de Estudiantes con Discapacidad<br>{provincia} - {canton}",
+    title=f"Proyección de Estudiantes con Discapacidad - {provincia} - {canton}<br>",
     xaxis_title="Año Lectivo",
     yaxis_title="Total de Estudiantes",
+    width= 500,
     height=450,
     template="plotly_white"
 )
