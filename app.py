@@ -208,5 +208,5 @@ with col3:
    </div>
    """, unsafe_allow_html=True)
 
-st.sidebar("Proyección de Estudiantes con Discapacidad")
+st.sidebar.title("Proyección de Estudiantes con Discapacidad")
 
