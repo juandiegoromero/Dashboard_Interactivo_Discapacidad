@@ -294,5 +294,5 @@ st.sidebar.dataframe(df_proyeccion, use_container_width=True)
 
 
 #Footer
-st.image("Banner_IncludataEC2.png", use_container_width=true)
+st.image("Banner_IncludataEC2.png")
 
