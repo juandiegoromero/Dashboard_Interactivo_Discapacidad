@@ -96,15 +96,6 @@ df_canton = df[
 # Sumar estudiantes del cantón
 total_estudiantes_canton = df_canton['Total_Estudiantes'].sum()
 
-# Gráfico
-#grafico = px.histogram(
-#    df_filtrado,
- #    x="Discapacidad",
-#     title="Distribución por Tipo de Discapacidad"
-# )
-
-# st.plotly_chart(grafico, use_container_width=True)
-
 # Variables obtenidas de los filtros
 provincia = provincia
 canton = canton
@@ -123,12 +114,16 @@ st.markdown(f"""
 **Año lectivo:** {año_lectivo}
 """)
 
+
 st.sidebar.markdown(f"""
-### Distribución por Tipo de Discapacidad
+### Datos Informativos
 **Provincia:** {provincia}  
 **Cantón:** {canton}  
 **Año lectivo:** {año_lectivo}
 """)
+
+ Titulos = f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}"
+st.sidebar.subheader(Titulos)
 
 grafico_barras = px.bar(
     df_filtrado,
