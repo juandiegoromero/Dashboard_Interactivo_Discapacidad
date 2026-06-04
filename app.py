@@ -294,8 +294,6 @@ fig_pred.update_layout(
 
 st.sidebar.title("Proyección de Estudiantes con Discapacidad")
 
-st.subheader("Proyección de Estudiantes con Discapacidad")
-
 st.plotly_chart(
     fig_pred,
     use_container_width=True
