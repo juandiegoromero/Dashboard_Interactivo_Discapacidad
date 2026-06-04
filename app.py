@@ -133,8 +133,7 @@ st.sidebar.markdown(f"""
 grafico_barras = px.bar(
     df_filtrado,
     x="Discapacidad",
-    color_discrete_sequence=["green"],
-    title=f"Distribución por Tipo de Discapacidad - {provincia} | {canton} | {año_lectivo}
+    color_discrete_sequence=["green"]
 )
 # Cantidad de registros del cantón filtrado
 cant_canton = len(df_filtrado)
