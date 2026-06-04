@@ -289,4 +289,8 @@ df_proyeccion = pd.DataFrame({
 st.sidebar.subheader("Proyección de Estudiantes con Discapacidad")
 st.sidebar.dataframe(df_proyeccion, use_container_width=True)
 
-st.image("Banner_IncludataEC.png", use_container_width=True)
+st.markdown("""
+<div style="width:100%;">
+    <img src="Banner_IncludataEC.png" style="width:100%;">
+</div>
+""", unsafe_allow_html=True)
