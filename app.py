@@ -13,17 +13,13 @@ st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Siste
 st.sidebar.markdown(f """
     ##**Ojetivo de la aplicación:**
     Desarrollar un dashboard interactivo para el monitoreo de estudiantes con discapacidad en el sistema educativo ecuatoriano mediante técnicas de Ciencia de Datos y la plataforma Streamlit.<br>
-    """,
-    unsafe_allow_html=True
-)
+    """ )
 
 st.sidebar.markdown(f """
     ## **Integrantes:**
     Luis Alberto Chicaiza González<br>
     Juan Diego Romero Fernández
-    """,
-    unsafe_allow_html=True
-)
+    """ )
 
 # Cargar datos
 df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
