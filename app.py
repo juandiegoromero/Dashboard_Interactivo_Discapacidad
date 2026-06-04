@@ -163,8 +163,6 @@ st.plotly_chart(grafico, use_container_width=True)
 st.sidebar.plotly_chart(grafico_barras, use_container_width = True) 
 
 
-st.sidebar("Proyección de Estudiantes con Discapacidad")
-
 # CSS para los recuadros
 st.markdown("""
 <style>
@@ -210,5 +208,5 @@ with col3:
    </div>
    """, unsafe_allow_html=True)
 
-
+st.sidebar("Proyección de Estudiantes con Discapacidad")
 
