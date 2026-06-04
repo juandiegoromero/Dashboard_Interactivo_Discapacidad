@@ -7,7 +7,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 
-st.image("python.png")
+st.image("Includata EC.png")
 
 st.title("Dashboard Interactivo para el Monitoreo de la Discapacidad en el Sistema Educativo Ecuatoriano")
 
