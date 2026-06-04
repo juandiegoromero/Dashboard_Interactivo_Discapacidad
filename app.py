@@ -96,8 +96,6 @@ df_canton = df[
 # Sumar estudiantes del cantón
 total_estudiantes_canton = df_canton['Total_Estudiantes'].sum()
 
-
-
 # Gráfico
 #grafico = px.histogram(
 #    df_filtrado,
@@ -126,7 +124,7 @@ grafico = px.histogram(
   #)
 
 st.markdown(f"""
-### Distribución por Tipo de Discapacidad
+### Datos informativos
 **Provincia:** {provincia}  
 **Cantón:** {canton}  
 **Año lectivo:** {año_lectivo}
