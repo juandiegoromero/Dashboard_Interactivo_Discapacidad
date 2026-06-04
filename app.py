@@ -291,6 +291,6 @@ st.sidebar.dataframe(df_proyeccion, use_container_width=True)
 
 st.markdown("""
 <div style="width:100%;">
-    <img src="https://github.com/juandiegoromero/Dashboard_Interactivo_Discapacidad/edit/main/Banner_IncludataEC.png" style="width:100%;">
+    <img src="main/Banner_IncludataEC.png" style="width:100%;">
 </div>
 """, unsafe_allow_html=True)
