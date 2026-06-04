@@ -162,11 +162,8 @@ porcentaje = (total_estudiantes_canton / total_estudiantes_provincia * 100) if t
 st.plotly_chart(grafico, use_container_width=True)
 st.sidebar.plotly_chart(grafico_barras, use_container_width = True) 
 
-fig = go.Figure(go.Scattergeo())
-fig.update_layout(height=300, margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
 
-st.sidebar.plotly_chart(fig, use_container_width=True)
+st.sidebar("Proyección de Estudiantes con Discapacidad")
 
 # CSS para los recuadros
 st.markdown("""
