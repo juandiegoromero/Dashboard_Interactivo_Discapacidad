@@ -24,7 +24,7 @@ st.sidebar.markdown(f"""
 
 st.subheader("Cargar un dataset externo (Excel xlsx):")
 
-uploaded_files = st.file_uploader(
+ = st.file_uploader(
     "Upload data", accept_multiple_files=False, type="xlsx"
 )
 
@@ -40,7 +40,7 @@ uploaded_files = st.file_uploader(
 
 if st.button("Registrar Dataset"):
 
-    if archivo_excel is not None:
+    if uploaded_files is not None:
 
         st.session_state["df"] = pd.read_excel(archivo_excel)
 
