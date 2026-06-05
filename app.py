@@ -24,7 +24,7 @@ st.sidebar.markdown(f"""
 
 st.subheader("Cargar un dataset externo (Excel xlsx):")
 
- = st.file_uploader(
+ uploaded_files = st.file_uploader(
     "Upload data", accept_multiple_files=False, type="xlsx"
 )
 
