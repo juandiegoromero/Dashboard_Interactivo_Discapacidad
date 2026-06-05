@@ -23,7 +23,8 @@ st.sidebar.markdown(f"""
     -  Juan Diego Romero Fernández """)
 
 # Cargar datos
-df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
+# df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
+df = pd.read_csv("Base_Inicio_Historico_Discapacidad.csv")
 
 st.write("Vista previa de los datos")
 st.dataframe(df.head())
