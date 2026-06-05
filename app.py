@@ -27,6 +27,7 @@ st.subheader("Cargar un dataset externo (Excel xlsx):")
 uploaded_files = st.file_uploader(
     "Upload data", accept_multiple_files=True, type="xlsx"
 )
+
 for uploaded_file in uploaded_files:
     df = pd.read_xlsx(uploaded_file)
     st.write(df)
