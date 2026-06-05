@@ -22,40 +22,11 @@ st.sidebar.markdown(f"""
     -  Luis Alberto Chicaiza González
     -  Juan Diego Romero Fernández """)
 
-st.subheader("Cargar un dataset externo (Excel xlsx):")
-
- uploaded_files = st.file_uploader(
-    "Upload data", accept_multiple_files=False, type="xlsx"
-)
-
-# for uploaded_file in uploaded_files:
-    # df = pd.read_xlsx(uploaded_file)
-   #  st.write(df)
-
 # Cargar datos
-# df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
+df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
 
-#st.write("Vista previa de los datos")
-#st.dataframe(df.head())
-
-if st.button("Registrar Dataset"):
-
-    if uploaded_files is not None:
-
-        st.session_state["df"] = pd.read_excel(archivo_excel)
-
-        st.success("Dataset registrado correctamente")
-
-    else:
-        st.warning("Debe seleccionar un archivo.")
-
-# Mostrar información si ya existe el dataset
-if "df" in st.session_state:
-
-    df = st.session_state["df"]
-
-    st.write("Dataset cargado:")
-    st.dataframe(df.head())
+st.write("Vista previa de los datos")
+st.dataframe(df.head())
 
 # Selección de provincia
 provincias = sorted(df["Provincia"].dropna().unique())
