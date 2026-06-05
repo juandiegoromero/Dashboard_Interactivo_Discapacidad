@@ -32,7 +32,7 @@ for uploaded_file in uploaded_files:
     st.write(df)
 
 # Cargar datos
-df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
+# df = pd.read_excel("Base_Inicio_Historico_Discapacidad.xlsx")
 
 st.write("Vista previa de los datos")
 st.dataframe(df.head())
